@@ -1,10 +1,10 @@
 <template>
   <q-layout view="lHh LpR lFf" class="shadow-2 rounded-borders">
-    <q-header elevated style="background-color: #fff">
+    <q-header elevated>
       <q-toolbar>
         <q-btn
+          class="text-grey-5"
           flat
-          style="color: #171919"
           @click="drawer = !drawer"
           round
           dense
@@ -13,9 +13,9 @@
       </q-toolbar>
     </q-header>
 
-    <q-footer style="background-color: #fff" elevated>
+    <q-footer class="bg-grey-3" elevated>
       <q-toolbar>
-        <q-toolbar-title style="color: #171919">Footer</q-toolbar-title>
+        <q-toolbar-title class="text-grey-5">Footer</q-toolbar-title>
       </q-toolbar>
     </q-footer>
 
@@ -27,13 +27,10 @@
       :breakpoint="700"
       elevated
     >
-      <q-scroll-area style="background-color: #fff" class="fit">
+      <q-scroll-area class="fit s-vertical-line--right">
         <q-list>
-          <q-item
-            style="color: #171919; justify-content: center; align-items: center"
-          >
+          <q-item class="s-item__logo">
             <q-img
-              class="quasar-logo__logotype"
               height="60%"
               width="80%"
               src="https://cdn.quasar.dev/logo-v2/svg/logotype.svg"
@@ -42,7 +39,7 @@
           <template v-for="(menuItem, index) in menuList" :key="index">
             <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
               <q-item-section avatar>
-                <q-icon :name="menuItem.icon" />
+                <q-icon size="1rem" :name="menuItem.icon" />
               </q-item-section>
               <q-item-section>
                 {{ menuItem.label }}
@@ -55,7 +52,7 @@
     </q-drawer>
 
     <q-page-container>
-      <q-page style="padding: 32px">
+      <q-page class="q-pa-lg bg-grey-2">
         <router-view />
       </q-page>
     </q-page-container>
@@ -69,7 +66,7 @@ const menuList = [
   {
     icon: "dashboard",
     label: "Dashboard",
-    separator: true,
+    separator: false,
   },
   {
     icon: "group",
@@ -99,3 +96,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+// $
+
+@import "@/assets/css/base-page.scss";
+</style>
