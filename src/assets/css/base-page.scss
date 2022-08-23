@@ -6,10 +6,36 @@
   box-shadow: 0px 2px 3px #0000001a;
 }
 
+.router-link {
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #e6f1f2;
+  }
+  * {
+    color: #a1a1a4;
+    transition: all 0.3s ease;
+  }
+
+  &-exact-active,
+  &:hover {
+    background-color: darken(#e6f1f2, 0.5);
+    border-color: $primary;
+    * {
+      color: $primary;
+    }
+  }
+}
+
 .s-item__logo {
   color: $brand-color-primary-black;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2px;
 }
 
 .s-vertical-line--right {

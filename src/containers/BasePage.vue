@@ -37,14 +37,16 @@
             />
           </q-item>
           <template v-for="(menuItem, index) in menuList" :key="index">
-            <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
-              <q-item-section avatar>
-                <q-icon size="1rem" :name="menuItem.icon" />
-              </q-item-section>
-              <q-item-section>
-                {{ menuItem.label }}
-              </q-item-section>
-            </q-item>
+            <router-link class="router-link" :to="{ name: menuItem.name }">
+              <q-item>
+                <q-item-section avatar>
+                  <q-icon size="1rem" :name="menuItem.icon" />
+                </q-item-section>
+                <q-item-section>
+                  {{ menuItem.label }}
+                </q-item-section>
+              </q-item>
+            </router-link>
             <q-separator :key="'sep' + index" v-if="menuItem.separator" />
           </template>
         </q-list>
@@ -66,23 +68,27 @@ const menuList = [
   {
     icon: "dashboard",
     label: "Dashboard",
+    name: "Inicio",
     separator: false,
   },
   {
     icon: "group",
     label: "Clientes",
+    name: "Clientes",
     separator: false,
   },
-  {
-    icon: "inventory",
-    label: "Produtos",
-    separator: false,
-  },
-  {
-    icon: "assignment",
-    label: "Relatório",
-    separator: false,
-  },
+  // {
+  //   icon: "inventory",
+  //   label: "Produtos",
+  //   name: "",
+  //   separator: false,
+  // },
+  // {
+  //   icon: "assignment",
+  //   label: "Relatório",
+  //   name: "",
+  //   separator: false,
+  // },
 ];
 
 export default {
