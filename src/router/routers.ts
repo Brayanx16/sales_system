@@ -13,7 +13,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/clients",
         name: "Clientes",
-        component: () => import("@/views/clients/ClientsList.vue"),
+        component: () => import("@/views/clients/ListClients.vue"),
+      },
+      {
+        path: "add/clients",
+        name: "Cadastrar clientes",
+        component: () => import("@/views/clients/AddClients.vue"),
       },
     ],
   },

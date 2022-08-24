@@ -1,0 +1,19 @@
+.q-table thead tr:first-child th {
+  background-color: $brand-color-secondary-light;
+  color: $primary;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.q-table__card {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.q-table__top {
+  padding-right: 0px;
+}
+
+.q-table__bottom {
+  justify-content: end;
+}
