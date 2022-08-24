@@ -2,7 +2,11 @@
   "name": "sales-system",
   "private": false,
   "version": "0.0.1",
-  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Brayan Marcos Barros",
+    "github": "https://github.com/Brayanx16"
+  },
   "scripts": {
     "dev": "vite --port 8080",
     "build": "vue-tsc --noEmit && vite build",

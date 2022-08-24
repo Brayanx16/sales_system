@@ -15,7 +15,16 @@
 
     <q-footer class="bg-grey-3" elevated>
       <q-toolbar>
-        <q-toolbar-title class="text-grey-5">Footer</q-toolbar-title>
+        <q-toolbar-title style="font-size: 14px" class="text-grey-5">
+          &copy; {{ ano.getUTCFullYear() }} MIT licensed
+          <a
+            style="text-decoration: none; color: #2196f3"
+            href="https://github.com/Brayanx16/sales_system"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Brayan M.B</a
+          >
+        </q-toolbar-title>
       </q-toolbar>
     </q-footer>
 
@@ -97,6 +106,7 @@ export default {
   setup() {
     return {
       drawer: ref(false),
+      ano: new Date(),
       menuList,
     };
   },
