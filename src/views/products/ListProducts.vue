@@ -1,11 +1,11 @@
 <template>
   <div class="q-mb-xl row no-wrap justify-between items-center">
     <span>
-      <h2>Clientes</h2>
+      <h2>Produtos</h2>
     </span>
     <span>
-      <router-link class="link" :to="{ name: 'Cadastrar cliente' }">
-        <q-btn color="primary" label="Cadastrar cliente" icon="add" no-caps />
+      <router-link class="link" :to="{ name: 'Cadastrar produto' }">
+        <q-btn color="primary" label="Cadastrar produto" icon="add" no-caps />
       </router-link>
     </span>
   </div>
@@ -53,11 +53,35 @@
 import { defineComponent, ref } from "vue";
 
 const columns = [
-  { name: "id", field: "id", label: "ID", align: "left", sortable: true },
-  { name: "name", field: "name", label: "Nome", align: "left", sortable: true },
-  { name: "cpf", field: "cpf", label: "CPF", align: "left" },
-  { name: "phone", label: "Telefone", field: "phone", align: "left" },
-  { name: "sex", label: "Sexo", field: "sex", align: "left" },
+  { name: "id", field: "id", label: "Nª", align: "left", sortable: true },
+  {
+    name: "name",
+    field: "name",
+    label: "Nome do produto",
+    align: "left",
+    sortable: true,
+  },
+  {
+    name: "due_date_formated",
+    field: "due_date_formated",
+    label: "Data de vencimento",
+    align: "center",
+    sortable: true,
+  },
+  {
+    name: "quantity",
+    field: "quantity",
+    label: "Quantidade",
+    align: "center",
+    sortable: true,
+  },
+  {
+    name: "value",
+    field: "value",
+    label: "Valor do Produto",
+    align: "center",
+    sortable: true,
+  },
 ];
 
 export default defineComponent({
