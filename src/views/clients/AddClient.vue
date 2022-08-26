@@ -88,9 +88,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
+import { defineComponent, ref } from "vue";
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(null),
@@ -100,5 +100,5 @@ export default {
       options: ["Masculino", "Feminino", "Outros"],
     };
   },
-};
+});
 </script>

@@ -86,12 +86,12 @@ const menuList = [
     name: "Clientes",
     separator: false,
   },
-  // {
-  //   icon: "inventory",
-  //   label: "Produtos",
-  //   name: "",
-  //   separator: false,
-  // },
+  {
+    icon: "inventory",
+    label: "Produtos",
+    name: "Produtos",
+    separator: false,
+  },
   // {
   //   icon: "assignment",
   //   label: "Relatório",
